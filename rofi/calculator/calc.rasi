@@ -1,0 +1,15 @@
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+    show-icons: false;
+    display-calc: "";
+}
+
+window {
+    width: 18%;
+}
+
+entry {
+    font: "SF Pro Display Bold 18";
+    placeholder: " ";
+}

@@ -1,0 +1,22 @@
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+    modi: "dmenu";
+    show-icons: false;
+    display-dmenu: "󰤨 ";
+}
+
+entry {
+    placeholder: "Search networks";
+}
+
+listview {
+    enabled: true;
+    lines: 8;
+    dynamic: true;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 14px;
+}

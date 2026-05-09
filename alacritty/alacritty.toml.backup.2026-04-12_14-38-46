@@ -1,0 +1,20 @@
+[window]
+
+opacity = 0.8
+
+padding = {x = 10, y = 10}
+
+decorations = "None"
+
+startup_mode = "Maximized" 
+
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/dark_plus.toml"
+]
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 14
+
+
