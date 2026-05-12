@@ -91,7 +91,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -168,9 +168,6 @@ vim.o.confirm = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-
--- Open the file explorer
-vim.keymap.set("n", "-", "<cmd>Ex<CR>")
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -890,15 +887,13 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		"tanvirtin/monokai.nvim",
-		priority = 1000,
+	{ -- Oil file explorer
+		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require("monokai").setup({
-				palette = require("monokai").classic,
-			})
+			require("oil").setup()
 
-			vim.cmd.colorscheme("monokai")
+			vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 		end,
 	},
 
@@ -923,6 +918,18 @@ require("lazy").setup({
 	-- 		vim.cmd.colorscheme("unokai")
 	-- 	end,
 	-- },
+
+	{
+		"tanvirtin/monokai.nvim",
+		priority = 1000,
+		config = function()
+			require("monokai").setup({
+				palette = require("monokai").classic,
+			})
+
+			vim.cmd.colorscheme("monokai")
+		end,
+	},
 
 	-- Highlight todo, notes, etc in comments
 	{
