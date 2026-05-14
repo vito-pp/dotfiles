@@ -44,7 +44,7 @@ output * bg /home/vito/Pictures/fondos/wallhaven-3ldrjd_1920x1080.png fill
 # Example configuration:
 #
 exec swayidle -w \
-	 timeout 297 'chayang' \
+	 timeout 294 'chayang -d 6' \
          timeout 300 'swaylock -f' \
          timeout 308 'swaymsg "output * power off"' \
 	 	resume 'chayang --abort; swaymsg "output * power on"' \
@@ -266,7 +266,7 @@ client.focused $focus_color $focus_color $text_color $focus_color $focus_color
 client.unfocused $inactive_color $inactive_color $bg_color $inactive_color $inactive_color
 client.focused_inactive $inactive_color $inactive_color $bg_color $inactive_color $inactive_color
 
-bindsym $mod+Shift+b exec swaylock -f
+bindsym $mod+Shift+b exec sh -c 'swaylock & sleep 1 && swaymsg "output * power off"'
 
 input * {
     xkb_layout us,es
