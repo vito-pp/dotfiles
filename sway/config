@@ -44,7 +44,7 @@ output * bg /home/vito/Pictures/fondos/wallhaven-3ldrjd_1920x1080.png fill
 # Example configuration:
 #
 exec swayidle -w \
-	 timeout 294 'chayang -d 6' \
+	 timeout 292 'chayang -d 10' \
          timeout 300 'swaylock -f' \
          timeout 308 'swaymsg "output * power off"' \
 	 	resume 'chayang --abort; swaymsg "output * power on"' \
@@ -151,7 +151,7 @@ exec swayidle -w \
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+h splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -254,7 +254,9 @@ gaps inner 3
 gaps outer 3
 smart_gaps off
 
-bindsym $mod+f exec firefox
+bindsym $mod+b exec firefox
+
+bindsym $mod+f exec nautilus
 
 set $focus_color   #3a3a3a
 set $bg_color      #1e1e1e
@@ -273,6 +275,7 @@ input * {
     xkb_options grp:alt_shift_toggle
 }
 
+# Power menu and web-search menu
 bindsym $mod+s exec /home/vito/.config/rofi/powermenu/powermenu.sh
 bindsym $mod+Shift+Space exec /home/vito/.config/rofi/web-search/rofi-web-search.sh
 
