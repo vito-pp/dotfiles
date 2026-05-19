@@ -235,6 +235,7 @@ default_border pixel 2
 
 font pango:SF Pro Display 11
 
+# SwayFX stuff
 corner_radius 6
 
 blur enable
@@ -242,6 +243,8 @@ blur_radius 6
 blur_passes 2
 
 layer_effects "rofi" blur enable; blur_ignore_transparent enable;
+
+default_dim_inactive 0.08
 
 input "1267:32:Elan_Touchpad" {
     tap enabled

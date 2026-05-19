@@ -205,6 +205,15 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+-- Toggle column marker
+vim.keymap.set("n", "<leader>c", function()
+	if vim.o.colorcolumn == "" then
+		vim.o.colorcolumn = "80"
+	else
+		vim.o.colorcolumn = ""
+	end
+end, { desc = "Toggle colorcolumn at 80" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -1064,3 +1073,4 @@ require("lazy").setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+vim.o.autoread = true
