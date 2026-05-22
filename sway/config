@@ -231,12 +231,12 @@ bindsym $mod+r mode "resize"
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 # my configs
-default_border pixel 0
+default_border pixel 1
 
 font pango:SF Pro Display 11
 
 # SwayFX stuff
-corner_radius 6
+corner_radius 8
 
 blur enable
 blur_radius 6
