@@ -231,7 +231,7 @@ bindsym $mod+r mode "resize"
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 # my configs
-default_border pixel 2
+default_border pixel 0
 
 font pango:SF Pro Display 11
 
@@ -244,7 +244,7 @@ blur_passes 2
 
 layer_effects "rofi" blur enable; blur_ignore_transparent enable;
 
-default_dim_inactive 0.08
+default_dim_inactive 0.15
 
 input "1267:32:Elan_Touchpad" {
     tap enabled

@@ -212,7 +212,7 @@ vim.keymap.set("n", "<leader>c", function()
 	else
 		vim.o.colorcolumn = ""
 	end
-end, { desc = "Toggle colorcolumn at 80" })
+end, { desc = "Toggle column marker at 80" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -1080,4 +1080,9 @@ require("lazy").setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Manually reload all files
 vim.o.autoread = true
+vim.keymap.set("n", "<leader>R", "<cmd>checktime<CR>", {
+	desc = "Check/reload files changed on disk",
+})

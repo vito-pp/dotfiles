@@ -6,7 +6,7 @@ configuration {
 }
 
 window {
-    width: 18%;
+    width: 25%;
 }
 
 entry {
