@@ -257,7 +257,7 @@ gaps inner 3
 gaps outer 3
 smart_gaps off
 
-bindsym $mod+b exec firefox
+bindsym $mod+i exec firefox
 
 bindsym $mod+f exec nautilus
 
@@ -296,6 +296,8 @@ bindgesture swipe:3:left workspace next
 bindgesture swipe:3:up exec $rofi_cmd -show drun -modes drun
 
 bindsym $mod+n exec alacritty -t nmtui -e sh -c 'sleep 0.05; nmtui'
+
+bindsym $mod+b exec blueman-manager
 
 # Make this apps pop windows
 for_window [title="nmtui"] floating enable, resize set 900 600, move position center
