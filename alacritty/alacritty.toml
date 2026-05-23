@@ -9,7 +9,7 @@ padding = { x = 12, y = 12 }
 opacity = 0.6
 
 [scrolling]
-history = 3023
+history = 10000
 
 [cursor]
 style = { shape = "Block", blinking = "On" }

@@ -1,0 +1,26 @@
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+    modi: "dmenu";
+    show-icons: false;
+    display-dmenu: "󰈞";
+}
+
+entry {
+    placeholder: "Search files";
+}
+
+listview {
+    enabled: true;
+    lines: 8;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 10px;
+}
+
+window {
+    padding: 18px;
+    width: 40%;
+}

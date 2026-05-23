@@ -35,7 +35,7 @@ output * bg /home/vito/Pictures/fondos/wallhaven-3ldrjd_1920x1080.png fill
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+# output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -90,7 +90,7 @@ exec swayidle -w \
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -159,8 +159,8 @@ exec swayidle -w \
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
-    # Make the current focus fullscreen
-    bindsym $mod+Shift+f fullscreen
+    # Make the current focus fullscreen/zen mode
+    bindsym $mod+Shift+z fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+m floating toggle
@@ -244,7 +244,7 @@ blur_passes 2
 
 layer_effects "rofi" blur enable; blur_ignore_transparent enable;
 
-default_dim_inactive 0.15
+default_dim_inactive 0.10
 
 input "1267:32:Elan_Touchpad" {
     tap enabled
@@ -260,6 +260,7 @@ smart_gaps off
 bindsym $mod+i exec firefox
 
 bindsym $mod+f exec nautilus
+bindsym $mod+Shift+f exec ~/.config/rofi/file-search/file-search.sh
 
 set $focus_color   #3a3a3a
 set $bg_color      #1e1e1e
@@ -280,14 +281,14 @@ input * {
 
 # Power menu and web-search menu
 bindsym $mod+s exec /home/vito/.config/rofi/powermenu/powermenu.sh
-bindsym $mod+Shift+Space exec /home/vito/.config/rofi/web-search/rofi-web-search.sh
+bindsym $mod+Shift+i exec /home/vito/.config/rofi/web-search/rofi-web-search.sh
 
 # Start cliphist daemon on login — pipes wl-paste into cliphist store
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
 bindsym $mod+c exec /home/vito/.config/rofi/clipboard/rofi-clipboard.sh
-bindsym $mod+x exec cliphist wipe
+bindsym $mod+Shift+c exec cliphist wipe
 
 # 3-finger swipe: switch workspaces
 bindgesture swipe:3:right workspace prev
