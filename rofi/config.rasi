@@ -61,7 +61,7 @@ entry {
     expand: true;
     background-color: transparent;
     text-color: @fg;
-    placeholder: "Search apps";
+    placeholder: "Search apps                                                                         ";
     placeholder-color: @fg-muted;
 }
 

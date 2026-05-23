@@ -7,7 +7,7 @@ configuration {
 }
 
 entry {
-    placeholder: "Search files";
+    placeholder: "Search files                                                                                                                  󰱽";
 }
 
 listview {
