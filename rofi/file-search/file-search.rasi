@@ -4,6 +4,7 @@ configuration {
     modi: "dmenu";
     show-icons: false;
     display-dmenu: "󰈞";
+    markup: true;
 }
 
 entry {

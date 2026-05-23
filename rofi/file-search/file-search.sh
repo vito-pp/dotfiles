@@ -11,8 +11,15 @@ FILE=$(
         --exclude .var \
         --exclude target \
         --exclude build \
-    | awk -F/ '{ print $NF "\t" $0 }' \
-    | rofi -dmenu -i -theme ~/.config/rofi/file-search/file-search.rasi -p "" \
+    | awk -F/ '{ 
+        file=$NF
+        path=$0
+        print "<b>" file "</b>\t<span alpha=\"60%\">" path "</span>"
+    }' \
+    | rofi -dmenu -markup-rows -i \
+        -theme ~/.config/rofi/file-search/file-search.rasi \
+        -p "" \
+    | sed -E 's/<[^>]+>//g' \
     | cut -f2-
 )
 

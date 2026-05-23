@@ -156,8 +156,8 @@ exec swayidle -w \
 
     # Switch the current container between different layout styles
     # bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+t layout tabbed
+    bindsym $mod+Shift+t layout toggle split
 
     # Make the current focus fullscreen/zen mode
     bindsym $mod+Shift+z fullscreen
@@ -257,7 +257,9 @@ gaps inner 3
 gaps outer 3
 smart_gaps off
 
+# Search web/internet
 bindsym $mod+i exec firefox
+bindsym $mod+Shift+i exec /home/vito/.config/rofi/web-search/rofi-web-search.sh
 
 bindsym $mod+f exec nautilus
 bindsym $mod+Shift+f exec ~/.config/rofi/file-search/file-search.sh
@@ -279,9 +281,8 @@ input * {
     xkb_options grp:alt_shift_toggle
 }
 
-# Power menu and web-search menu
+# Power menu
 bindsym $mod+s exec /home/vito/.config/rofi/powermenu/powermenu.sh
-bindsym $mod+Shift+i exec /home/vito/.config/rofi/web-search/rofi-web-search.sh
 
 # Start cliphist daemon on login — pipes wl-paste into cliphist store
 exec wl-paste --type text --watch cliphist store
