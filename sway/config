@@ -44,9 +44,9 @@ output * bg /home/vito/Pictures/fondos/wallhaven-3ldrjd_1920x1080.png fill
 # Example configuration:
 #
 exec swayidle -w \
-	 timeout 292 'chayang -d 10' \
+	 timeout 290 'chayang -d 10' \
          timeout 300 'swaylock -f' \
-         timeout 308 'swaymsg "output * power off"' \
+         timeout 600 'swaymsg "output * power off"' \
 	 	resume 'chayang --abort; swaymsg "output * power on"' \
 	 timeout 900 'systemctl suspend' \
          before-sleep 'swaylock -f'
@@ -278,7 +278,8 @@ bindsym $mod+Shift+b exec swaylock -f
 
 input * {
     xkb_layout us,es
-    xkb_options grp:alt_shift_toggle
+    # Both Shift keys together
+    xkb_options grp:shifts_toggle
 }
 
 # Power menu
@@ -294,6 +295,10 @@ bindsym $mod+Shift+c exec cliphist wipe
 # 3-finger swipe: switch workspaces
 bindgesture swipe:3:right workspace prev
 bindgesture swipe:3:left workspace next
+
+# $mod + scroll wheel: change workspace
+bindsym --whole-window $mod+button4 workspace prev_on_output
+bindsym --whole-window $mod+button5 workspace next_on_output
 
 # bindgesture swipe:3:up exec $rofi_cmd -show drun -modes drun
 

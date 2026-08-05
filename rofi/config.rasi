@@ -5,6 +5,7 @@ configuration {
     font: "SF Pro Display 12";
 
     display-drun: "";
+    run-command: "fish -c '{cmd}'";
 }
 
 @theme "/dev/null"
