@@ -118,6 +118,14 @@ vim.schedule(function()
 	vim.o.clipboard = "unnamedplus"
 end)
 
+-- So deleting doest copy to clipboard
+vim.keymap.set("n", "d", '"_d')
+vim.keymap.set("n", "dd", '"_dd')
+vim.keymap.set("v", "d", '"_d')
+
+vim.keymap.set("n", "x", '"_x')
+vim.keymap.set("v", "x", '"_x')
+
 -- Enable break indent
 vim.o.breakindent = true
 
