@@ -160,7 +160,7 @@ exec swayidle -w \
     bindsym $mod+Shift+t layout toggle split
 
     # Make the current focus fullscreen/zen mode
-    bindsym $mod+Shift+z fullscreen
+    bindsym $mod+z fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+m floating toggle
@@ -279,7 +279,7 @@ bindsym $mod+Shift+b exec swaylock -f
 input * {
     xkb_layout us,es
     # Both Shift keys together
-    xkb_options grp:shifts_toggle
+    xkb_options grp:ctrl_space_toggle
 }
 
 # Power menu

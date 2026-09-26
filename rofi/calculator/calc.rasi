@@ -3,11 +3,55 @@
 configuration {
     show-icons: false;
     display-calc: "";
+
+    /*
+     * Calculator shortcuts
+     *
+     * Enter        -> copy + stay open
+     * Ctrl+Enter   -> copy + close
+     * Shift+Delete -> delete history entry
+     * Alt+Enter    -> reuse expression
+     * Ctrl+L       -> clear history
+     * F1           -> quick help
+     */
+
+    kb-custom-1: "Control+Return";
+    kb-custom-2: "Control+l";
+    kb-custom-3: "F1";
+
+    kb-delete-entry: "Shift+Delete";
+
+    /*
+     * Put the underlying row value back into the input.
+     * The script deliberately stores only the expression
+     * as the underlying value.
+     */
+    kb-row-select: "Control+space,Alt+Return";
+
+
+    /*
+     * Free bindings that would otherwise conflict with
+     * our calculator shortcuts.
+     */
+    kb-accept-custom: "";
+    kb-mode-complete: "";
+
+
+    /*
+     * Recalculate whenever the input changes.
+     *
+     * kb-custom-19 -> ROFI_RETV=28
+     */
+    inputchange {
+        action: "kb-custom-19";
+    }
 }
+
 
 window {
     width: 25%;
 }
+
 
 entry {
     font: "SF Pro Display Bold 18";
