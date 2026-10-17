@@ -1,0 +1,175 @@
+
+/* Classic i3-inspired Waybar */
+
+/* Colors */
+@define-color black   #000000;
+@define-color blue    #285577;
+@define-color border  #4c7899;
+@define-color gray    #222222;
+@define-color fg      #dddddd;
+@define-color green   #00dd00;
+@define-color red     #ff5555;
+@define-color yellow  #ffb86c;
+
+/* Global */
+* {
+    font-family: "DejaVu Sans Mono", "JetBrainsMono Nerd Font Propo", monospace;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+window#waybar {
+    background-color: @black;
+    color: @fg;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    background-color: @gray;
+    color: #888888;
+    border: 1px solid #333333;
+    padding: 0 7px;
+    margin: 0;
+    min-width: 0;
+    min-height: 0;
+}
+
+#workspaces button:hover {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+    background-color: @blue;
+    border-color: @border;
+    color: #ffffff;
+}
+
+#workspaces button.visible:not(.focused) {
+    background-color: #5f676a;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #900000;
+    color: #ffffff;
+}
+
+/* General module spacing */
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#bluetooth,
+#backlight,
+#language,
+#idle_inhibitor,
+#scratchpad,
+#window,
+#mode,
+#custom-power,
+#privacy {
+    background-color: transparent;
+    padding: 0 5px;
+    margin: 0;
+    color: @fg;
+}
+
+/* Small separators between status modules */
+.modules-right > widget {
+    border-left: 1px solid #333333;
+}
+
+/* Normal system status */
+#network,
+#cpu,
+#memory,
+#battery {
+    color: @green;
+}
+
+/* Intermediate warnings */
+#battery.warning:not(.charging):not(.plugged),
+#cpu.warning,
+#memory.warning {
+    color: @yellow;
+}
+
+/* Critical warnings */
+#battery.critical:not(.charging):not(.plugged),
+#cpu.critical,
+#memory.critical,
+#network.disconnected,
+#network.disabled {
+    color: @red;
+}
+
+/* Charging */
+#battery.charging,
+#battery.plugged {
+    color: @green;
+}
+
+/* Bluetooth */
+#bluetooth.connected {
+    color: @green;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @red;
+}
+
+/* Volume and brightness */
+#pulseaudio,
+#backlight {
+    color: #ffffff;
+}
+
+#pulseaudio.muted {
+    color: @red;
+}
+
+/* Power */
+#custom-power {
+    color: @red;
+    padding: 0 9px;
+}
+
+/* Other indicators */
+#idle_inhibitor.activated {
+    color: @green;
+}
+
+#mode {
+    background-color: #900000;
+    color: #ffffff;
+}
+
+/* Privacy indicators */
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 4px;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: @black;
+    border: 1px solid @border;
+}
+
+tooltip label {
+    color: #ffffff;
+}

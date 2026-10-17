@@ -231,19 +231,20 @@ bindsym $mod+r mode "resize"
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 # my configs
-default_border pixel 1
+default_border pixel 
 
-font pango:SF Pro Display 11
+
+font pango:monospace 11
 
 # SwayFX stuff
-corner_radius 8
+corner_radius 0
 
-blur enable
-blur_radius 6
-blur_passes 2
-
-layer_effects "rofi" blur enable; blur_ignore_transparent enable;
-
+blur disable
+blur_radius 0
+blur_passes 0
+#
+# layer_effects "rofi" blur enable; blur_ignore_transparent enable;
+#
 default_dim_inactive 0.10
 
 input "1267:32:Elan_Touchpad" {
@@ -253,8 +254,8 @@ input "1267:32:Elan_Touchpad" {
     accel_profile adaptive
 }
 
-gaps inner 3
-gaps outer 3
+gaps inner 0
+gaps outer 0
 smart_gaps off
 
 # Search web/internet
@@ -264,15 +265,18 @@ bindsym $mod+Shift+i exec /home/vito/.config/rofi/web-search/rofi-web-search.sh
 bindsym $mod+f exec nautilus
 bindsym $mod+Shift+f exec ~/.config/rofi/file-search/file-search.sh
 
-set $focus_color   #3a3a3a
-set $bg_color      #1e1e1e
-set $inactive_color #2b2b2b
+# Traditional i3 window colors
+#                        border   background text     indicator child_border
+client.focused           #4c7899  #285577    #ffffff  #2e9ef4   #285577
+client.focused_inactive  #333333  #5f676a    #ffffff  #484e50   #5f676a
+client.unfocused         #333333  #222222    #888888  #292d2e   #222222
+client.urgent            #2f343a  #900000    #ffffff  #900000   #900000
 
 set $text_color #ffffff
 
-client.focused $focus_color $focus_color $text_color $focus_color $focus_color
-client.unfocused $inactive_color $inactive_color $bg_color $inactive_color $inactive_color
-client.focused_inactive $inactive_color $inactive_color $bg_color $inactive_color $inactive_color
+# client.focused $focus_color $focus_color $text_color $focus_color $focus_color
+# client.unfocused $inactive_color $inactive_color $bg_color $inactive_color $inactive_color
+# client.focused_inactive $inactive_color $inactive_color $bg_color $inactive_color $inactive_color
 
 bindsym $mod+Shift+b exec swaylock -f
 

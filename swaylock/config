@@ -6,7 +6,7 @@ disable-caps-lock-text
 indicator-caps-lock
 indicator-idle-visible
 
-font=SF Pro Design
+font=monospace
 font-size=24
 
 image=/home/vito/Pictures/fondos/wallhaven-3ldrjd_1920x1080_blur.png
