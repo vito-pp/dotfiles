@@ -72,12 +72,12 @@
     "tooltip": false
   },
   "bluetooth": {
-    "format": "bt",
-    "format-connected": "bt {num_connections}",
-    "format-disabled": "bt off",
-    "format-off": "bt off",
-    "tooltip": false,
-    "on-click": "blueman-manager"
+      "format": "<span size='15000'></span>",
+      "format-disabled": "<span size='15000'>󰂲</span>",
+      "format-off": "<span size='15000'>󰂲</span>",
+      "format-connected": "<span size='16000'>󰂱</span>",
+      "tooltip": false,
+      "on-click": "blueman-manager"
   },
   "network": {
     "format-wifi": "WiFi {signalStrength}%",

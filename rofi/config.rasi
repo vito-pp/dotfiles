@@ -8,4 +8,6 @@ configuration {
     run-command: "fish -c '{cmd}'";
 }
 
-@theme "default"
+//@theme "default"
+
+@theme "/usr/share/rofi/themes/Monokai.rasi"
