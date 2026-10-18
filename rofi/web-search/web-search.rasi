@@ -7,7 +7,7 @@ configuration {
 }
 
 entry {
-    placeholder: "Search in web                                                                      󰖟";
+    placeholder: " 󰱽 Search the web...";
 }
 
 listview {

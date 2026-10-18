@@ -55,9 +55,9 @@
       "activated": "",
       "deactivated": ""
     },
-    "tooltip": true,
-    "tooltip-format-activated": "Idle inhibition enabled (click to disable)",
-    "tooltip-format-deactivated": "Idle inhibition disabled (click to enable)"
+    "tooltip": false
+    // "tooltip-format-activated": "Idle inhibition enabled",
+    // "tooltip-format-deactivated": "Idle inhibition disabled"
   },
   "backlight": {
     "format": "bri {percent}%",
