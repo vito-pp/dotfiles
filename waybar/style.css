@@ -1,4 +1,4 @@
-/* i3-inspired Waybar: textual separators and square highlighted states */
+/* i3-inspired Waybar: CSS separators, native privacy, square highlighted states */
 @define-color bg #000000;
 @define-color foreground #dddddd;
 @define-color blue #285577;
@@ -58,10 +58,19 @@ window#waybar {
     color: #ffffff;
 }
 
-/* Format strings supply actual '|' separators; no CSS border separators. */
+/* CSS separators sit on the outer widget, so colored module backgrounds
+   (e.g., white when awake) do not color the separator itself. */
+.modules-right > widget {
+    border-left: 1px solid #484848;
+    margin-left: 7px;
+    padding-left: 8px;
+}
+
+/* Status labels retain a little breathing room inside each widget. */
 #mode,
 #scratchpad,
 #window,
+#privacy,
 #idle_inhibitor,
 #backlight,
 #pulseaudio,
@@ -75,7 +84,7 @@ window#waybar {
 #custom-power {
     background: transparent;
     margin: 0;
-    padding: 0 3px;
+    padding: 0 5px;
     border: 0;
     color: @foreground;
 }
@@ -112,16 +121,20 @@ window#waybar {
 
 #bluetooth.connected { color: @green; }
 
+/* Native Waybar privacy colors, from its sample stylesheet. */
 #privacy {
     background: transparent;
     padding: 0 3px;
-    margin: 0;
 }
 
 #privacy-item {
-    background: transparent;
-    padding: 0 2px;
+    padding: 0 5px;
+    color: #ffffff;
 }
+
+#privacy-item.screenshare { background-color: #cf5700; }
+#privacy-item.audio-in   { background-color: #1ca000; }
+#privacy-item.audio-out  { background-color: #0069d4; }
 
 /* Just the eye is an icon. Black eye on white when awake. */
 #idle_inhibitor {

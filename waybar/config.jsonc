@@ -31,34 +31,26 @@
     "format": "{value}"
   },
   "sway/mode": {
-    "format": "mode {} |"
+    "format": "mode {}"
   },
   "sway/scratchpad": {
-    "format": "sp {count} |",
+    "format": "sp {count}",
     "show-empty": false,
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
   "sway/window": {
     "format": "{}",
-    "max-length": 40,
+    "max-length": 100,
     "tooltip": false
   },
   "sway/language": {
-    "format": "{short} |",
+    "format": "{short}",
     "tooltip": false,
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
   },
-  "privacy": {
-    "icon-size": 8,
-    "modules": [
-        { "type": "audio-in", "tooltip": true },
-        { "type": "audio-out", "tooltip": true },
-        { "type": "screenshare", "tooltip": true }
-    ]
-  },
   "idle_inhibitor": {
-    "format": "{icon} |",
+    "format": "{icon}",
     "format-icons": {
       "activated": "",
       "deactivated": ""
@@ -68,31 +60,31 @@
     "tooltip-format-deactivated": "Idle inhibition disabled (click to enable)"
   },
   "backlight": {
-    "format": "bri {percent}% |",
+    "format": "bri {percent}%",
     "tooltip": false
   },
   "pulseaudio": {
-    "format": "vol {volume}% |",
-    "format-muted": "mute |",
-    "format-bluetooth": "vol {volume}% bt |",
-    "format-bluetooth-muted": "mute bt |",
+    "format": "vol {volume}%",
+    "format-muted": "mute",
+    "format-bluetooth": "vol {volume}% bt",
+    "format-bluetooth-muted": "mute bt",
     "on-click": "pavucontrol",
     "tooltip": false
   },
   "bluetooth": {
-    "format": "bt |",
-    "format-connected": "bt {num_connections} |",
-    "format-disabled": "bt off |",
-    "format-off": "bt off |",
+    "format": "bt",
+    "format-connected": "bt {num_connections}",
+    "format-disabled": "bt off",
+    "format-off": "bt off",
     "tooltip": false,
     "on-click": "blueman-manager"
   },
   "network": {
-    "format-wifi": "WiFi {signalStrength}% |",
-    "format-ethernet": "lan |",
-    "format-linked": "link |",
-    "format-disconnected": "net down |",
-    "format-disabled": "net off |",
+    "format-wifi": "WiFi {signalStrength}%",
+    "format-ethernet": "lan",
+    "format-linked": "link",
+    "format-disconnected": "net down",
+    "format-disabled": "net off",
     "tooltip": true,
     "tooltip-format": "{ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}",
     "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}",
@@ -100,7 +92,7 @@
     "on-click": "~/.config/waybar/scripts/nmtui-popup.sh"
   },
   "cpu": {
-    "format": "cpu {usage}% |",
+    "format": "cpu {usage}%",
     "interval": 3,
     "states": {
       "warning": 85,
@@ -108,7 +100,7 @@
     }
   },
   "memory": {
-    "format": "ram {percentage}% |",
+    "format": "ram {percentage}%",
     "interval": 3,
     "states": {
       "warning": 85,
@@ -121,15 +113,15 @@
       "critical": 15
     },
     "interval": 3,
-    "format": "bat {capacity}% |",
-    "format-full": "bat full |",
-    "format-charging": "bat {capacity}%+ |",
-    "format-plugged": "bat {capacity}%+ |",
-    "format-alt": "{time} |"
+    "format": "bat {capacity}%",
+    "format-full": "bat full",
+    "format-charging": "bat {capacity}%+",
+    "format-plugged": "bat {capacity}%+",
+    "format-alt": "{time}"
   },
   "clock": {
     "timezone": "America/Argentina/Buenos_Aires",
-    "format": "{:%a %d %b %H:%M} |",
+    "format": "{:%a %d %b %H:%M}",
     "tooltip": true,
     "tooltip-format": "<span font='DejaVu Sans Mono' size='12pt'>{calendar}</span>",
     "on-click": "gnome-calendar",
@@ -148,5 +140,23 @@
     "format": "pwr",
     "tooltip": false,
     "on-click": "~/.config/rofi/powermenu/powermenu.sh"
+  },
+  "privacy": {
+    "icon-size": 18,
+    "icon-spacing": 4,
+    "modules": [
+      {
+        "type": "audio-in",
+        "tooltip": true
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true
+      },
+      {
+        "type": "screenshare",
+        "tooltip": true
+      }
+    ]
   }
 }
