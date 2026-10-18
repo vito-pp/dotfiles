@@ -7,7 +7,7 @@ configuration {
 }
 
 entry {
-    placeholder: " 󰱽 Search in clipboard...";
+    placeholder: "Search in clipboard...";
 }
 
 listview {

@@ -34,8 +34,8 @@ window {
     background-color: @bg;
 
     border-radius: 0px;
-    border: 1px;
-    border-color: #3a3a3a;
+    border: 2px;
+    border-color: #285577;
     padding: 18px;
 }
 
