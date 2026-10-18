@@ -9,8 +9,8 @@ indicator-idle-visible
 font=monospace
 font-size=24
 
-image=/home/vito/Pictures/fondos/pissarro2.jpg
-scaling=fill
+image=/home/vito/Pictures/fondos/pissarro3.jpg
+scaling=stretch
 
 indicator-radius=90
 indicator-thickness=8
