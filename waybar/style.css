@@ -62,9 +62,6 @@ window#waybar {
 #mode,
 #scratchpad,
 #window,
-#custom-privacy-share,
-#custom-privacy-mic,
-#custom-privacy-audio,
 #idle_inhibitor,
 #backlight,
 #pulseaudio,
@@ -115,19 +112,16 @@ window#waybar {
 
 #bluetooth.connected { color: @green; }
 
-/* Privacy tags are individually highlighted, visible only while active. */
-#custom-privacy-share.active,
-#custom-privacy-mic.active {
-    background: @orange;
-    color: #000000;
+#privacy {
+    background: transparent;
+    padding: 0 3px;
+    margin: 0;
 }
 
-#custom-privacy-audio.active {
-    background: @green;
-    color: #000000;
+#privacy-item {
+    background: transparent;
+    padding: 0 2px;
 }
-
-#custom-privacy-share.error { color: @red; }
 
 /* Just the eye is an icon. Black eye on white when awake. */
 #idle_inhibitor {

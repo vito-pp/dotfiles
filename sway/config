@@ -31,7 +31,7 @@ set $menu $rofi_cmd -show drun -modes drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /home/vito/Pictures/fondos/wallhaven-3ldrjd_1920x1080.png fill
+output * bg /home/vito/Pictures/fondos/pissarro2.jpg fill
 #
 # Example configuration:
 #
@@ -245,7 +245,7 @@ blur_passes 0
 #
 # layer_effects "rofi" blur enable; blur_ignore_transparent enable;
 #
-default_dim_inactive 0.10
+# default_dim_inactive 0.10
 
 input "1267:32:Elan_Touchpad" {
     tap enabled
