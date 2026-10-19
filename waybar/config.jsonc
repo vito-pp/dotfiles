@@ -1,6 +1,6 @@
 {
   "position": "bottom",
-  "height": 24,
+  "height": 28,
   "margin-top": 0,
   "margin-bottom": 0,
   "margin-left": 0,
@@ -75,7 +75,7 @@
       "format": "<span size='15000'></span>",
       "format-disabled": "<span size='15000'>󰂲</span>",
       "format-off": "<span size='15000'>󰂲</span>",
-      "format-connected": "<span size='16000'>󰂱</span>",
+      "format-connected": "<span size='15000'>󰂱</span>",
       "tooltip": false,
       "on-click": "blueman-manager"
   },
