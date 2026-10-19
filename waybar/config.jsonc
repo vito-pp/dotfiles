@@ -63,14 +63,22 @@
     "format": "bri {percent}%",
     "tooltip": false
   },
-  "pulseaudio": {
-    "format": "vol {volume}%",
+"pulseaudio": {
+    "format": "{icon} {volume}%",
     "format-muted": "mute",
-    "format-bluetooth": "vol {volume}% bt",
+    "format-bluetooth": "blt {volume}%",
     "format-bluetooth-muted": "mute bt",
+
+    "format-icons": {
+        "headphone": "ear",
+        "headset": "ear",
+        "hands-free": "ear",
+        "default": "vol"
+    },
+
     "on-click": "pavucontrol",
     "tooltip": false
-  },
+},
   "bluetooth": {
       "format": "<span size='15000'></span>",
       "format-disabled": "<span size='15000'>󰂲</span>",
