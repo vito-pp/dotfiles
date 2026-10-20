@@ -29,30 +29,31 @@ window#waybar {
 
 #workspaces button {
     background: #222222;
-    color: #aaaaaa;
-    border: 0;
-    border-right: 1px solid #333333;
-    margin: 0;
-    padding: 0 6px;
-    min-width: 0;
+    color: #888888;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 2px #333333;
+
+    min-width: 18px;
     min-height: 0;
+    padding: 0 4px;
+    margin: 0;
+
+    transition: none;
 }
 
-#workspaces button.focused {
-    background: @blue;
+#workspaces button.focused,
+#workspaces button.active {
+    background: #285577;
     color: #ffffff;
-    border: 2px solid #4c7899;
-}
-
-#workspaces button.visible:not(.focused) {
-    background: #5f676a;
-    color: #ffffff;
+    box-shadow: inset 0 0 0 2px #4c7899;
 }
 
 #workspaces button.urgent {
     background: #900000;
     color: #ffffff;
-    border-color: #b34a4a;
+    box-shadow: inset 0 0 0 2px #900000;
 }
 
 #workspaces button:hover:not(.focused):not(.urgent) {
@@ -60,12 +61,17 @@ window#waybar {
     color: #ffffff;
 }
 
-/* CSS separators sit on the outer widget, so colored module backgrounds
-   (e.g., white when awake) do not color the separator itself. */
+/* i3bar-style separators */
 .modules-right > widget {
-    border-left: 1px solid #484848;
-    margin-left: 7px;
-    padding-left: 8px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.modules-right > widget:not(:first-child) {
+    border-left: 1px solid #666666;
+    margin-left: 6px;
+    padding-left: 6px;
 }
 
 /* Status labels retain a little breathing room inside each widget. */
