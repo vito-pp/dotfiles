@@ -231,8 +231,8 @@ bindsym $mod+r mode "resize"
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 # my configs
-default_border pixel 
-
+default_border pixel 2
+titlebar_border_thickness 2
 
 font pango:monospace 10
 
