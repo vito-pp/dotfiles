@@ -21,7 +21,6 @@ window#waybar {
     color: @foreground;
 }
 
-/* Keep classic i3 rectangular workspace buttons. */
 #workspaces {
     margin: 0;
     padding: 0;

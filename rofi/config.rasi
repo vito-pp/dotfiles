@@ -102,7 +102,7 @@ element-icon {
 }
 
 element-text {
-    font: "monospace 12";
+    font: "monospace Bold 12";
     background-color: transparent;
     text-color: inherit;
     vertical-align: 0.5;
