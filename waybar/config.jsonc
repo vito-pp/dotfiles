@@ -16,9 +16,9 @@
   "modules-right": [
     "privacy",
     "idle_inhibitor",
+    "bluetooth",
     "backlight",
     "pulseaudio",
-    "bluetooth",
     "network",
     "cpu",
     "memory",
@@ -63,22 +63,6 @@
     "format": "bri {percent}%",
     "tooltip": false
   },
-"pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "mute",
-    "format-bluetooth": "blt {volume}%",
-    "format-bluetooth-muted": "mute bt",
-
-    "format-icons": {
-        "headphone": "ear",
-        "headset": "ear",
-        "hands-free": "ear",
-        "default": "vol"
-    },
-
-    "on-click": "pavucontrol",
-    "tooltip": false
-},
   "bluetooth": {
       "format": "<span size='15000'></span>",
       "format-disabled": "<span size='15000'>󰂲</span>",
@@ -86,6 +70,22 @@
       "format-connected": "<span size='15000'>󰂱</span>",
       "tooltip": false,
       "on-click": "blueman-manager"
+  },
+  "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-muted": "mute",
+      "format-bluetooth": "blt {volume}%",
+      "format-bluetooth-muted": "mute bt",
+  
+      "format-icons": {
+          "headphone": "ear",
+          "headset": "ear",
+          "hands-free": "ear",
+          "default": "vol"
+      },
+  
+      "on-click": "pavucontrol",
+      "tooltip": false
   },
   "network": {
     "format-wifi": "WiFi {signalStrength}%",
@@ -129,7 +129,7 @@
   },
   "clock": {
     "timezone": "America/Argentina/Buenos_Aires",
-    "format": "{:%a %d %b %H:%M}",
+    "format": "{:%a-%d-%b %H:%M}",
     "tooltip": true,
     "tooltip-format": "<span font='DejaVu Sans Mono' size='12pt'>{calendar}</span>",
     "on-click": "gnome-calendar",
