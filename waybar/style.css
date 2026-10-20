@@ -41,6 +41,7 @@ window#waybar {
 #workspaces button.focused {
     background: @blue;
     color: #ffffff;
+    border: 1px solid #4c7899;
 }
 
 #workspaces button.visible:not(.focused) {
@@ -51,6 +52,7 @@ window#waybar {
 #workspaces button.urgent {
     background: #900000;
     color: #ffffff;
+    border-color: #b34a4a;
 }
 
 #workspaces button:hover:not(.focused):not(.urgent) {

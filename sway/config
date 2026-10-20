@@ -234,7 +234,7 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
 default_border pixel 
 
 
-font pango:monospace 11
+font pango:monospace 10
 
 # SwayFX stuff
 corner_radius 0
