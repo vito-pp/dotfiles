@@ -119,7 +119,14 @@ window#waybar {
 
 #cpu.critical,
 #memory.critical,
-#battery.critical:not(.charging):not(.plugged),
+#battery.critical:not(.charging):not(.plugged) {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+#battery.full {
+    background-color: @green;
+    color: #ffffff;
+}
 #network.disconnected,
 #network.disabled,
 #bluetooth.disabled,
@@ -156,7 +163,7 @@ window#waybar {
 
 #custom-power {
     color: @red;
-    background: #222222;
+    /* background: #222222; */
     padding: 0 7px;
 }
 
