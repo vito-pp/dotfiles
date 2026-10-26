@@ -145,7 +145,7 @@
     }
   },
   "custom/power": {
-    "format": "pwr",
+    "format": "&lt;3",
     "tooltip": false,
     "on-click": "~/.config/rofi/powermenu/powermenu.sh"
   },
